@@ -120,15 +120,16 @@ Open up `~/sites/quickstart/config.toml` in a text editor:
 
 Replace the title above with something more personal. Also, if you already have a domain ready, set the `baseURL`. Note that this value is not needed when running the local development server.
 
-
 > Tip: Make the changes to the site configuration or any other file in your site while the Hugo server is running, and you will see the changes in the browser right away.
 
 ## Generate Static Site for Nginx
 
-This generates your website to the `public/` directory by default, although you can customize the output directory in your site configuration by changing the `publishDir` field.
-The site Hugo renders into `public/` is ready to be deployed to your Nginx:
+Execute this command:
 
     hugo
+
+This generates your website to the `public/` directory by default, although you can customize the output directory in your site configuration by changing the `publishDir` field.
+The site Hugo renders into `public/` is ready to be deployed to your Nginx.
 
 ## Install Nginx
 

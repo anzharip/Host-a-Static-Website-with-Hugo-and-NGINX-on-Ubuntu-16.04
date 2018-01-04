@@ -32,9 +32,7 @@ We think of Hugo as the ideal website creation tool with nearly instant build ti
 
 This guide will covers on how to install Hugo, and then deploy the generated website on nginx web server.
 
-{{< note >}}
-This guide is written for a non-root user. Commands that require elevated privileges are prefixed with `sudo`. If you’re not familiar with the `sudo` command, see the [Users and Groups](/docs/tools-reference/linux-users-and-groups) guide.
-{{< /note >}}
+ > This guide is written for a non-root user. Commands that require elevated privileges are prefixed with `sudo`. If you’re not familiar with the `sudo` command, see the [Users and Groups](/docs/tools-reference/linux-users-and-groups) guide.
 
 ## Before You Begin
 
@@ -123,7 +121,7 @@ Open up `~/sites/quickstart/config.toml` in a text editor:
 Replace the title above with something more personal. Also, if you already have a domain ready, set the baseURL. Note that this value is not needed when running the local development server.
 
 
-    Tip: Make the changes to the site configuration or any other file in your site while the Hugo server is running, and you will see the changes in the browser right away.
+> Tip: Make the changes to the site configuration or any other file in your site while the Hugo server is running, and you will see the changes in the browser right away.
 
 ## Generate Static Site for Nginx
 

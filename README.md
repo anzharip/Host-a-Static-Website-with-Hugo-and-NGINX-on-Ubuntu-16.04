@@ -118,26 +118,20 @@ Open up `~/sites/quickstart/config.toml` in a text editor:
     title = "My New Hugo Site"
     theme = "ananke"
 
-Replace the title above with something more personal. Also, if you already have a domain ready, set the baseURL. Note that this value is not needed when running the local development server.
+Replace the title above with something more personal. Also, if you already have a domain ready, set the `baseURL`. Note that this value is not needed when running the local development server.
 
 
 > Tip: Make the changes to the site configuration or any other file in your site while the Hugo server is running, and you will see the changes in the browser right away.
 
 ## Generate Static Site for Nginx
 
-This generates your website to the public/ directory by default, although you can customize the output directory in your site configuration by changing the publishDir field.
-The site Hugo renders into public/ is ready to be deployed to your Nginx:
+This generates your website to the `public/` directory by default, although you can customize the output directory in your site configuration by changing the `publishDir` field.
+The site Hugo renders into `public/` is ready to be deployed to your Nginx:
 
     hugo
 
 ## Install Nginx
 
-To ensure compatibility of installation and with future updates, install Nginx from the Ubuntu package repository using apt:
+Follow [Install and configure nginx and PHP-FastCGI on Ubuntu 16.04](https://linode.com/docs/web-servers/nginx/install-and-configure-nginx-and-php-fastcgi-on-ubuntu-16-04/), specifically the *Before You Begin*, *Install nginx, PHP for Processing, and Required Packages*, and *Configure nginx Virtual Hosting and the PHP Processor*.
 
-    sudo apt-get install nginx
-
-## Configure Nginx Virtual Hosting
-
-In this guide, the domain example.com is used as an example site. Substitute your own FQDN or IP in the configuration steps that follow.
-
-Nginx uses server directives to specify name-based virtual hosts. Nginx calls these server blocks. All server blocks are contained within server directives in site files, located in /etc/nginx/sites-available. When activated, these are included in the main nginx configuration by default.
+Skip the part involving PHP, since we are not using PHP for this site. 

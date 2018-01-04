@@ -38,13 +38,22 @@ This guide is written for a non-root user. Commands that require elevated privil
 
 ## Before You Begin
 
-1.  Complete the Getting Started guide.
+1.  Complete the Getting Started guide, specifically setting the hostname.
+2. To confirm your hostname, issue the following commands on your Linode:
 
-2.  Follow the Securing Your Server guide to create a standard user account, harden SSH access and remove unnecessary network services; this guide will use sudo wherever possible.  Do not follow the Configuring a Firewall section–this guide has instructions specifically for an nginx production server.
+    hostname
+    hostname -f
 
-3.  Log in to your Linode via SSH and check for updates using apt-get package manager.      sudo apt-get update && sudo apt-get upgrade
+The first command shows your short hostname, and the second shows your fully qualified domain name (FQDN).
+
+3.  Follow the Securing Your Server guide to create a standard user account, harden SSH access and remove unnecessary network services; this guide will use sudo wherever possible.  Do not follow the Configuring a Firewall section–this guide has instructions specifically for an Nginx production server.
+
+4.  Log in to your Linode via SSH and check for updates using apt-get package manager.      
+
+    sudo apt-get update && sudo apt-get upgrade
 
 ## Open Corresponding Firewall Ports
+
 In this case we’re using default web port 80 and hugo default port 1313 for draft, but this could be any port you specify later in the configuration file.
 
     sudo ufw allow ssh
@@ -53,6 +62,7 @@ In this case we’re using default web port 80 and hugo default port 1313 for dr
     sudo ufw enable
 
 ## Install Hugo
+
 Use apt to install hugo from Ubuntu repository:
 
     sudo apt-get install hugo
@@ -70,12 +80,15 @@ Create a new Hugo site in a folder named quickstart.
 
 
 ## Add a Theme
+
 See themes.gohugo.io for a list of themes to consider. This quickstart uses the beautiful Ananke theme.
 
     cd quickstart;\
     git init;\
     git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke;\
-    # Edit your config.toml configuration file and add the Ananke theme.
+
+Edit your `config.toml` configuration file and add the Ananke theme:
+
     echo 'theme = "ananke"' >> config.toml
 
 From your `~/sites` directory, executes this command:
@@ -130,4 +143,6 @@ To ensure compatibility of installation and with future updates, install Nginx f
 
 ## Configure Nginx Virtual Hosting
 
-Older versions of Nginx specified site directories and other information in the main `nginx.conf` file, but newer versions, such as the ones included with Ubuntu 16.04, are more compartmentalized. As you read through this section, make note of each file’s contents and location so that you are familiar with the structure and know where to go if you need to customize one particular aspect of your web server.
+In this guide, the domain example.com is used as an example site. Substitute your own FQDN or IP in the configuration steps that follow.
+
+Nginx uses server directives to specify name-based virtual hosts. Nginx calls these server blocks. All server blocks are contained within server directives in site files, located in /etc/nginx/sites-available. When activated, these are included in the main nginx configuration by default.

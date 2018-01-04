@@ -38,7 +38,7 @@ This guide is written for a non-root user. Commands that require elevated privil
 
 ## Before You Begin
 
-1.  Complete the Getting Started guide, specifically setting the hostname.
+1. Complete the Getting Started guide, specifically setting the hostname.
 2. To confirm your hostname, issue the following commands on your Linode:
 
     hostname

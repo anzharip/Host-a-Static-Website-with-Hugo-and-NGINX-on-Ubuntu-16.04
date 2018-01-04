@@ -30,7 +30,7 @@ Hugo is a static site generator. Unlike systems that dynamically build a page wi
 Websites built with Hugo are extremely fast and secure. Hugo sites can be hosted anywhere, including on Linode. Hugo sites run without the need for a database or dependencies on expensive runtimes like Ruby, Python, or PHP.
 We think of Hugo as the ideal website creation tool with nearly instant build times, able to rebuild whenever a change is made.
 
-This guide will covers on how to install Hugo, and then deploy the generated website on nginx web server. 
+This guide will covers on how to install Hugo, and then deploy the generated website on nginx web server.
 
 ## Before You Begin
 
@@ -61,20 +61,19 @@ The above will create a new Hugo site in a folder named quickstart.
 
 ## Add a Theme
 See themes.gohugo.io for a list of themes to consider. This quickstart uses the beautiful Ananke theme.
-cd quickstart;\
-git init;\
-git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke;\
+    cd quickstart;\
+    git init;\
+    git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke;\
 
-# Edit your config.toml configuration file
-# and add the Ananke theme.
-echo 'theme = "ananke"' >> config.toml
-                                                                                                    
+Edit your config.toml configuration file and add the Ananke theme.
+    echo 'theme = "ananke"' >> config.toml
+
 ~/sites                                                                                             
-▶ cd quickstart                                                                                     
-                                                                                                    
+    cd quickstart                                                                                     
+
 ~/sites/quickstart                                                                                  
-▶ git init                                                                                          
+    git init                                                                                          
 Initialized empty Git repository in /Users/bep/sites/quickstart/.git/                               
-                                                                                                    
+
 ~/sites/quickstart  master ✗                                                                    ◒   
-▶ git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
+    git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke

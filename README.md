@@ -32,6 +32,10 @@ We think of Hugo as the ideal website creation tool with nearly instant build ti
 
 This guide will covers on how to install Hugo, and then deploy the generated website on nginx web server.
 
+{{< note >}}
+This guide is written for a non-root user. Commands that require elevated privileges are prefixed with `sudo`. If you’re not familiar with the `sudo` command, see the [Users and Groups](/docs/tools-reference/linux-users-and-groups) guide.
+{{< /note >}}
+
 ## Before You Begin
 
 1.  Complete the Getting Started guide.
@@ -57,6 +61,7 @@ In this case we’re using default web port 80 and hugo default port 1313 for dr
 ## Create a New Site
 
     hugo new site quickstart
+
 The above will create a new Hugo site in a folder named quickstart.
 
 ## Add a Theme
@@ -70,17 +75,17 @@ Edit your config.toml configuration file and add the Ananke theme.
 
     echo 'theme = "ananke"' >> config.toml
 
-From your ~/sites directory, executes this command:
+From your `~/sites` directory, executes this command:
 
     cd quickstart                                                                                     
 
-From your ~/sites/quickstart directory, executes this command:
+From your `~/sites/quickstart` directory, executes this command:
 
     git init                                                                                          
 
-Initialized empty Git repository in ~/sites/quickstart/.git/
+Initialized empty Git repository in `~/sites/quickstart/.git/`:
 
-~/sites/quickstart  master
+~/sites/quickstart
 
     git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
 
@@ -92,34 +97,23 @@ Edit the newly created content file if you want. Now, start the Hugo server with
 
     hugo server -D
 
-Started building sites ...
-Built site for language en:
-1 of 1 draft rendered
-0 future content
-0 expired content
-1 regular pages created
-8 other pages created
-0 non-page files copied
-1 paginator pages created
-0 categories created
-0 tags created
-total in 18 ms
-Watching for changes in /Users/bep/sites/quickstart/{data,content,layouts,static,themes}
-Serving pages from memory
-Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
-Press Ctrl+C to stop
-Navigate to your new site at http://localhost:1313/.
-
 ## Customize the Site
 Your new site already looks great, but you will want to tweak it a little before you release it to the public.
 Site Configuration
-Open up config.toml in a text editor:
-baseURL = "https://example.org/"
-languageCode = "en-us"
-title = "My New Hugo Site"
-theme = "ananke"
+Open up `config.toml` in a text editor:
+
+{{< file ~/sites/quickstart >}}
+    baseURL = "https://example.org/"
+    languageCode = "en-us"
+    title = "My New Hugo Site"
+    theme = "ananke"
+{{< /file >}}
+
 Replace the title above with something more personal. Also, if you already have a domain ready, set the baseURL. Note that this value is not needed when running the local development server.
+
+{{< note >}}
 Tip: Make the changes to the site configuration or any other file in your site while the Hugo server is running, and you will see the changes in the browser right away.
+{{< /note >}}
 
 ## Generate Static Site for nginx
 

@@ -53,16 +53,21 @@ In this case we’re using default web port 80 and hugo default port 1313 for dr
     sudo ufw enable
 
 ## Install Hugo
+Use apt to install hugo from Ubuntu repository:
 
     sudo apt-get install hugo
+
+Check hugo version to verify installation:
+
     hugo version
 
 
 ## Create a New Site
 
+Create a new Hugo site in a folder named quickstart.
+
     hugo new site quickstart
 
-The above will create a new Hugo site in a folder named quickstart.
 
 ## Add a Theme
 See themes.gohugo.io for a list of themes to consider. This quickstart uses the beautiful Ananke theme.
@@ -91,6 +96,9 @@ Initialized empty Git repository in `~/sites/quickstart/.git/`:
 
 
 ## Add New Content
+
+Add new content using below command:
+
     hugo new posts/my-first-post.md
 
 Edit the newly created content file if you want. Now, start the Hugo server with drafts enabled:
@@ -99,7 +107,6 @@ Edit the newly created content file if you want. Now, start the Hugo server with
 
 ## Customize the Site
 Your new site already looks great, but you will want to tweak it a little before you release it to the public.
-Site Configuration
 Open up `config.toml` in a text editor:
 
 {{< file ~/sites/quickstart >}}
@@ -118,7 +125,7 @@ Tip: Make the changes to the site configuration or any other file in your site w
 ## Generate Static Site for nginx
 
 This generates your website to the public/ directory by default, although you can customize the output directory in your site configuration by changing the publishDir field.
-The site Hugo renders into public/ is ready to be deployed to your web server:
+The site Hugo renders into public/ is ready to be deployed to your nginx:
 
     hugo
 

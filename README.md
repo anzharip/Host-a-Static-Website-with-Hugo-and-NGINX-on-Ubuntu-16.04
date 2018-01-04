@@ -75,9 +75,7 @@ See themes.gohugo.io for a list of themes to consider. This quickstart uses the 
     cd quickstart;\
     git init;\
     git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke;\
-
-Edit your config.toml configuration file and add the Ananke theme.
-
+    # Edit your config.toml configuration file and add the Ananke theme.
     echo 'theme = "ananke"' >> config.toml
 
 From your `~/sites` directory, executes this command:
@@ -87,13 +85,7 @@ From your `~/sites` directory, executes this command:
 From your `~/sites/quickstart` directory, executes this command:
 
     git init                                                                                          
-
-Initialized empty Git repository in `~/sites/quickstart/.git/`:
-
-~/sites/quickstart
-
     git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
-
 
 ## Add New Content
 
@@ -106,6 +98,7 @@ Edit the newly created content file if you want. Now, start the Hugo server with
     hugo server -D
 
 ## Customize the Site
+
 Your new site already looks great, but you will want to tweak it a little before you release it to the public.
 Open up `config.toml` in a text editor:
 
@@ -122,19 +115,19 @@ Replace the title above with something more personal. Also, if you already have 
 Tip: Make the changes to the site configuration or any other file in your site while the Hugo server is running, and you will see the changes in the browser right away.
 {{< /note >}}
 
-## Generate Static Site for nginx
+## Generate Static Site for Nginx
 
 This generates your website to the public/ directory by default, although you can customize the output directory in your site configuration by changing the publishDir field.
-The site Hugo renders into public/ is ready to be deployed to your nginx:
+The site Hugo renders into public/ is ready to be deployed to your Nginx:
 
     hugo
 
-## Install nginx
+## Install Nginx
 
-To ensure compatibility of installation and with future updates, install nginx from the Ubuntu package repository using apt:
+To ensure compatibility of installation and with future updates, install Nginx from the Ubuntu package repository using apt:
 
     sudo apt-get install nginx
 
-## Configure nginx Virtual Hosting
+## Configure Nginx Virtual Hosting
 
-Older versions of nginx specified site directories and other information in the main nginx.conf file, but newer versions, such as the ones included with Ubuntu 16.04, are more compartmentalized. As you read through this section, make note of each file’s contents and location so that you are familiar with the structure and know where to go if you need to customize one particular aspect of your web server.
+Older versions of Nginx specified site directories and other information in the main `nginx.conf` file, but newer versions, such as the ones included with Ubuntu 16.04, are more compartmentalized. As you read through this section, make note of each file’s contents and location so that you are familiar with the structure and know where to go if you need to customize one particular aspect of your web server.

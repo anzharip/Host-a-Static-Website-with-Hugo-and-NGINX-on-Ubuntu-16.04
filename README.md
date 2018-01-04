@@ -50,7 +50,7 @@ This guide is written for a non-root user. Commands that require elevated privil
 
 4.  Log in to your Linode via SSH and check for updates using apt-get package manager.      
 
-    sudo apt-get update && sudo apt-get upgrade
+        sudo apt-get update && sudo apt-get upgrade
 
 ## Open Corresponding Firewall Ports
 

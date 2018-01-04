@@ -130,9 +130,11 @@ The site Hugo renders into public/ is ready to be deployed to your nginx:
     hugo
 
 ## Install nginx
+
 To ensure compatibility of installation and with future updates, install nginx from the Ubuntu package repository using apt:
 
     sudo apt-get install nginx
 
 ## Configure nginx Virtual Hosting
+
 Older versions of nginx specified site directories and other information in the main nginx.conf file, but newer versions, such as the ones included with Ubuntu 16.04, are more compartmentalized. As you read through this section, make note of each file’s contents and location so that you are familiar with the structure and know where to go if you need to customize one particular aspect of your web server.

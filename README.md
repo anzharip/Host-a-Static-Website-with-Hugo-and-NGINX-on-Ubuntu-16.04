@@ -132,6 +132,6 @@ The site Hugo renders into `public/` is ready to be deployed to your Nginx:
 
 ## Install Nginx
 
-Follow [Install and configure nginx and PHP-FastCGI on Ubuntu 16.04](https://linode.com/docs/web-servers/nginx/install-and-configure-nginx-and-php-fastcgi-on-ubuntu-16-04/), specifically the *Before You Begin*, *Install nginx, PHP for Processing, and Required Packages*, and *Configure nginx Virtual Hosting and the PHP Processor*.
+Follow [Install and configure nginx and PHP-FastCGI on Ubuntu 16.04](https://linode.com/docs/web-servers/nginx/install-and-configure-nginx-and-php-fastcgi-on-ubuntu-16-04/), specifically the **Before You Begin**, **Install nginx, PHP for Processing, and Required Packages**, and **Configure nginx Virtual Hosting and the PHP Processor**.
 
-Skip the part involving PHP, since we are not using PHP for this site. 
+Skip the part involving PHP, since we are not using PHP for this site.

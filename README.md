@@ -68,12 +68,12 @@ See themes.gohugo.io for a list of themes to consider. This quickstart uses the 
 Edit your config.toml configuration file and add the Ananke theme.
     echo 'theme = "ananke"' >> config.toml
 
-~/sites                                                                                             
+~/sites
     cd quickstart                                                                                     
 
-~/sites/quickstart                                                                                  
+~/sites/quickstart
     git init                                                                                          
-Initialized empty Git repository in /Users/bep/sites/quickstart/.git/                               
+Initialized empty Git repository in /Users/bep/sites/quickstart/.git/
 
-~/sites/quickstart  master ✗                                                                    ◒   
+~/sites/quickstart  master
     git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke

@@ -20,7 +20,6 @@ external_resources:
   - ‘[NGINX Install Guide](http://nginx.org/en/linux_packages.html)’
   - ‘[NGINX Beginners Guide](http://nginx.org/en/docs/beginners_guide.html)’
 
-
 ---
 
 ## Introduction

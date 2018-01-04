@@ -77,3 +77,5 @@ Initialized empty Git repository in /Users/bep/sites/quickstart/.git/
 
 ~/sites/quickstart  master
     git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
+
+## WHY?

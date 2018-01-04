@@ -38,7 +38,7 @@ This guide is written for a non-root user. Commands that require elevated privil
 
 ## Before You Begin
 
-1.  Complete the Getting Started guide, specifically setting the hostname.
+1.  Complete the [Getting Started](https://www.linode.com/docs/getting-started/) guide, specifically setting the hostname.
 2.  To confirm your hostname, issue the following commands on your Linode:
 
         hostname
@@ -46,7 +46,7 @@ This guide is written for a non-root user. Commands that require elevated privil
 
     The first command shows your short hostname, and the second shows your fully qualified domain name (FQDN).
 
-3.  Follow the Securing Your Server guide to create a standard user account, harden SSH access and remove unnecessary network services; this guide will use sudo wherever possible.  Do not follow the Configuring a Firewall section–this guide has instructions specifically for an Nginx production server.
+3.  Follow the [Securing Your Server](https://www.linode.com/docs/security/securing-your-server/) guide to create a standard user account, harden SSH access and remove unnecessary network services; this guide will use sudo wherever possible.  Do not follow the Configuring a Firewall section–this guide has instructions specifically for an Nginx production server.
 
 4.  Log in to your Linode via SSH and check for updates using apt-get package manager.      
 
@@ -113,20 +113,17 @@ Edit the newly created content file if you want. Now, start the Hugo server with
 ## Customize the Site
 
 Your new site already looks great, but you will want to tweak it a little before you release it to the public.
-Open up `config.toml` in a text editor:
+Open up `~/sites/quickstart/config.toml` in a text editor:
 
-{{< file ~/sites/quickstart >}}
     baseURL = "https://example.org/"
     languageCode = "en-us"
     title = "My New Hugo Site"
     theme = "ananke"
-{{< /file >}}
 
 Replace the title above with something more personal. Also, if you already have a domain ready, set the baseURL. Note that this value is not needed when running the local development server.
 
-{{< note >}}
-Tip: Make the changes to the site configuration or any other file in your site while the Hugo server is running, and you will see the changes in the browser right away.
-{{< /note >}}
+
+    Tip: Make the changes to the site configuration or any other file in your site while the Hugo server is running, and you will see the changes in the browser right away.
 
 ## Generate Static Site for Nginx
 

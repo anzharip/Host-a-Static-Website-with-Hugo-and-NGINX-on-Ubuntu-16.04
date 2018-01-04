@@ -38,13 +38,13 @@ This guide is written for a non-root user. Commands that require elevated privil
 
 ## Before You Begin
 
-1. Complete the Getting Started guide, specifically setting the hostname.
-2. To confirm your hostname, issue the following commands on your Linode:
+1.  Complete the Getting Started guide, specifically setting the hostname.
+2.  To confirm your hostname, issue the following commands on your Linode:
 
-    hostname
-    hostname -f
+        hostname
+        hostname -f
 
-The first command shows your short hostname, and the second shows your fully qualified domain name (FQDN).
+    The first command shows your short hostname, and the second shows your fully qualified domain name (FQDN).
 
 3.  Follow the Securing Your Server guide to create a standard user account, harden SSH access and remove unnecessary network services; this guide will use sudo wherever possible.  Do not follow the Configuring a Firewall section–this guide has instructions specifically for an Nginx production server.
 
